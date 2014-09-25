@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <addressformat_adminhtml_addressformat_index>
+        <reference name="content">
+            <block type="addressformat/adminhtml_addressformat" name="addressformat" />
+        </reference>
+    </addressformat_adminhtml_addressformat_index>
+</layout>

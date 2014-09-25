@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Addressformat</name>
+    <version>1.0.1</version>
+    <stability>devel</stability>
+    <license>GPL</license>
+    <channel>local</channel>
+    <extends/>
+    <summary>This Module is use for defined Address formats as per Country   </summary>
+    <description>This Module is use for defined Address formats as per Country   </description>
+    <notes>This Module is use for defined Address formats as per Country .</notes>
+    <authors><author><name>Kandarp</name><user>kandarp</user><email>kandarp.patel@cignex.com</email></author><author><name>Nishant</name><user>nishant</user><email>nishant.shah@cignex.com</email></author></authors>
+    <date>2012-05-17</date>
+    <time>07:15:37</time>
+    <contents><target name="magelocal"><dir name="Ct"><dir name="Addressformat"><dir name="Block"><file name="Addressformat.php" hash="cdf3c2939a0a2de008c2ddef398b5197"/><dir name="Adminhtml"><dir name="Addressformat"><dir name="Edit"><file name="Form.php" hash="76cfad87beba285744d40c2fb237b76a"/><dir name="Tab"><file name="Form.php" hash="0fa29d419c776c26130771fe4d76118a"/></dir><file name="Tabs.php" hash="9970b52e1baa0dcafa4060f90d8728c6"/></dir><file name="Edit.php" hash="a6a8dffdb86e2e702b697b038f8836f2"/><file name="Grid.php" hash="a805f9ad6be3862fb9cee774c92aec96"/></dir><file name="Addressformat.php" hash="0bbb78edd061f4e32109bb753342700c"/></dir><file name="Default.php" hash="83b27e18bfd8acfd403538573b9fa9da"/><dir name="Widget"><dir name="Renderer"><file name="Country.php" hash="916fc6ba661e16bb0fefb1435c4b34c9"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="6a2e7ea37dc359ff4c8c9cbb48578f93"/></dir><dir name="Model"><file name="Addressformat.php" hash="3e81e7c31a8e776ea73f3873f6d1d6c0"/><file name="Status.php" hash="f0bba9b48c001c003be4c724bf449ab2"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="AddressformatController.php" hash="218ea139369633169d398d12ea634706"/></dir></dir><dir name="etc"><file name="config.xml" hash="9a3e58efdc9a1189556b60909f50a95c"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="addressformat.xml" hash="37beb210023c295198ccc0ba320f7629"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Ct_Addressformat.xml" hash="9083145cc0c48c0f8c087e07dbc0eb99"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
