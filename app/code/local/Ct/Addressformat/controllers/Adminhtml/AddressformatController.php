@@ -17,39 +17,27 @@ class Ct_Addressformat_Adminhtml_AddressformatController extends Mage_Adminhtml_
     }
 
     public function editAction() {
-        
         $id     = $this->getRequest()->getParam('id');
         $model  = Mage::getModel('addressformat/addressformat')->load($id);
+        if ($model->getId() && $model->getFormat()) {
+           $model->setData($data);
+        } else {
+            $addressFormate = Mage::getStoreConfig('customer/address_templates/text');
+            $model->setFormat($addressFormate);
+        }
 
-        if ($model->getId() || $id == 0) {
-            $data = Mage::getSingleton('adminhtml/session')->getFormData(true);
-            if (!empty($data)) {
-                $model->setData($data);
-            }
-            else
-            {
-                $addressFormate = Mage::getStoreConfig('customer/address_templates/text');
-                $model->setFormat($addressFormate);
-            }
+        Mage::register('addressformat_data', $model);
 
-            Mage::register('addressformat_data', $model);
+        $this->loadLayout();
+        $this->_setActiveMenu('addressformat/items');
 
-            $this->loadLayout();
-            $this->_setActiveMenu('addressformat/items');
-
-            $this->_addBreadcrumb(Mage::helper('adminhtml')->__('Country Wise Address Format'), Mage::helper('adminhtml')->__('Country Wise Address Format'));
-            //$this->_addBreadcrumb(Mage::helper('adminhtml')->__('Item News'), Mage::helper('adminhtml')->__('Item News'));
-
-            $this->getLayout()->getBlock('head')->setCanLoadExtJs(true);
-
-            $this->_addContent($this->getLayout()->createBlock('addressformat/adminhtml_addressformat_edit'))
+        $this->_addBreadcrumb(Mage::helper('adminhtml')->__('Country Wise Address Format'), Mage::helper('adminhtml')->__('Country Wise Address Format'));
+        $this->getLayout()->getBlock('head')->setCanLoadExtJs(true);
+        $this->_addContent($this->getLayout()->createBlock('addressformat/adminhtml_addressformat_edit'))
                 ->_addLeft($this->getLayout()->createBlock('addressformat/adminhtml_addressformat_edit_tabs'));
 
-            $this->renderLayout();
-        } else {
-            Mage::getSingleton('adminhtml/session')->addError(Mage::helper('addressformat')->__('Item does not exist'));
-            $this->_redirect('*/*/');
-        }
+        $this->renderLayout();
+        
     }
  
     public function newAction() {
